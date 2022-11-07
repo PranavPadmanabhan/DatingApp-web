@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        comfortaa: ['Comfortaa', 'cursive'],
       },
       colors: {
         primary: {
@@ -24,6 +25,8 @@ module.exports = {
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
         dark: '#222222',
+        'black-100': 'rgba(0, 0, 0, 0.49)',
+        goldAccent: '#FFDCA9',
       },
       keyframes: {
         flicker: {
@@ -49,6 +52,12 @@ module.exports = {
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+      },
+      backgroundImage: {
+        background: 'url(/images/bg.jpg)',
+      },
+      boxShadow: {
+        container: '50px 0px 60px -3px rgba(0,0,0,0.9)',
       },
     },
   },

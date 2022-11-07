@@ -23,6 +23,12 @@ class MyDocument extends Document {
             type='font/woff2'
             crossOrigin='anonymous'
           />
+          <link rel='preconnect' href='https://fonts.googleapis.com'></link>
+          <link rel='preconnect' href='https://fonts.gstatic.com'></link>
+          <link
+            href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap'
+            rel='stylesheet'
+          ></link>
         </Head>
         <body>
           <Main />
