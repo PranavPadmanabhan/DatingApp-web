@@ -12,7 +12,7 @@ type Props = {
 
 const data = {
   hidden: {
-    x: '-100vw',
+    x: '-40vw',
   },
 };
 
@@ -24,7 +24,7 @@ const GetStarted = ({ setPage }: Props) => {
       {show && (
         <motion.div
           variants={data}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.6, damping: 100 }}
           exit='hidden'
           className='relative box-border flex h-[70%] w-[70%] flex-col items-center justify-end pb-[5%]'
         >

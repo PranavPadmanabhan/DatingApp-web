@@ -31,6 +31,7 @@ const GradientButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
           'min-w-[150px]',
           'rounded-[50px]',
           'transition-colors duration-75',
+          'cursor-pointer',
           //#region  //*=========== Variants ===========
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',

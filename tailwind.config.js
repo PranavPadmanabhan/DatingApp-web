@@ -26,7 +26,10 @@ module.exports = {
         },
         dark: '#222222',
         'black-100': 'rgba(0, 0, 0, 0.49)',
+        'black-00': 'rgba(0, 0, 0, 0.5)',
         goldAccent: '#FFDCA9',
+        'gold-100': '#FFF1DC',
+        'transparent-thin-border': 'rgba(0, 0, 0, 0.28)',
       },
       keyframes: {
         flicker: {
@@ -48,10 +51,30 @@ module.exports = {
             backgroundPosition: '700px 0',
           },
         },
+        'slide-left': {
+          '0%': {
+            transform: 'translateX(-40vw)',
+          },
+          to: {
+            transform: 'translateX(0)',
+          },
+        },
+        'slide-right': {
+          '0%': {
+            transform: 'translateX(40vw)',
+          },
+          to: {
+            transform: 'translateX(0)',
+          },
+        },
       },
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+        'slide-left':
+          'slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',
+        'slide-right':
+          'slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',
       },
       backgroundImage: {
         background: 'url(/images/bg.jpg)',
