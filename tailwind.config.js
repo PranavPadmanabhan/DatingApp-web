@@ -24,6 +24,13 @@ module.exports = {
           800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
+        bgcolor: ' #252525',
+        divcolor: '#151515',
+        buttoncolor: '#242424',
+        goldd: '#E3A400',
+        superlike: '#E3A400',
+        Honey: '#E3A401',
+        buttonbg: '#FFDCA9',
         dark: '#222222',
         'black-100': 'rgba(0, 0, 0, 0.49)',
         'black-00': 'rgba(0, 0, 0, 0.5)',
@@ -78,11 +85,12 @@ module.exports = {
       },
       backgroundImage: {
         background: 'url(/images/bg.jpg)',
+        zayn: 'ur(/images/download.jpeg)',
       },
       boxShadow: {
         container: '50px 0px 60px -3px rgba(0,0,0,0.9)',
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('daisyui')],
 };
