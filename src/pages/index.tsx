@@ -18,12 +18,12 @@ export default function HomePage() {
       case 'authScreen':
         return <AuthContainer setPage={setPage} />;
       case 'phoneAuthScreen':
-        return <PhoneAuthContainer setPage={setPage} />;
+        return <PhoneAuthContainer setPage={setPage} previous={false} />;
       case 'OtpScreen':
         return <OtpScreen setPage={setPage} />;
 
       default:
-        return <PhoneAuthContainer setPage={setPage} />;
+        return <PhoneAuthContainer setPage={setPage} previous={false} />;
     }
   };
 
