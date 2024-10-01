@@ -4,6 +4,7 @@ import * as React from 'react';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import AuthContainer from '@/containers/authContainer';
+import DetailsScreen from '@/containers/DetailsContainer';
 import GetStarted from '@/containers/GetStarted';
 import OtpScreen from '@/containers/OtpScreen';
 import PhoneAuthContainer from '@/containers/PhoneAuthContainer';
@@ -21,7 +22,8 @@ export default function HomePage() {
         return <PhoneAuthContainer setPage={setPage} previous={false} />;
       case 'OtpScreen':
         return <OtpScreen setPage={setPage} />;
-
+      case 'DetailsScreen':
+        return <DetailsScreen setPage={setPage} />;
       default:
         return <PhoneAuthContainer setPage={setPage} previous={false} />;
     }

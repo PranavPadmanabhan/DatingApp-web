@@ -34,7 +34,7 @@ const AuthContainer = ({ setPage }: Props) => {
           variants={data}
           initial='hidden'
           animate='visible'
-          transition={{ duration: 0.6, damping: 100 }}
+          transition={{ duration: 0.5, damping: 100 }}
           exit='exit'
           className='relative box-border flex h-[75%] w-[70%] flex-col items-center justify-end pb-[5%]'
         >
@@ -47,36 +47,36 @@ const AuthContainer = ({ setPage }: Props) => {
           />
           <GradientButton
             onClick={() => setShow(!show)}
-            className='mb-2 flex max-h-[45px] w-[70%] max-w-[310px] items-center justify-start'
+            className='mb-2 flex max-h-[11%] w-[70%] max-w-[70%] items-center justify-start'
           >
             <BsApple color='black' size={22} className='mx-[5%]' />
-            <h1 className='font-comfortaa text-[0.93vw] font-[700] text-black'>
+            <h1 className='font-comfortaa text-[0.9vw] font-[700] text-black'>
               SIGN IN USING APPLE ID
             </h1>
           </GradientButton>
           <GradientButton
             onClick={() => setShow(!show)}
-            className='mb-2 flex max-h-[45px] w-[70%] max-w-[310px] items-center justify-start'
+            className='mb-2 flex max-h-[11%] w-[70%] max-w-[70%] items-center justify-start'
           >
             <BsGoogle color='black' size={20} className='mx-[5%]' />
-            <h1 className='font-comfortaa text-[0.93vw] font-[700] text-black'>
+            <h1 className='font-comfortaa text-[0.9vw] font-[700] text-black'>
               SIGN IN USING GOOGLE
             </h1>
           </GradientButton>
           <GradientButton
             onClick={() => setShow(!show)}
-            className='mb-2 flex max-h-[45px] w-[70%] max-w-[310px] items-center justify-start'
+            className='mb-2 flex max-h-[11%] w-[70%] max-w-[70%] items-center justify-start'
           >
             <HiOutlineDeviceMobile
               color='black'
               size={25}
               className='mx-[3%]'
             />
-            <h1 className='ml-1 font-comfortaa text-[0.93vw] font-[700] leading-4 text-black'>
-              SIGN IN USING PHONE NO
+            <h1 className='ml-1 font-comfortaa text-[0.9vw] font-[700] text-black'>
+              SIGN IN USING PHONE
             </h1>
           </GradientButton>
-          <h1 className='mt-[5%] text-center font-comfortaa text-[0.93vw] font-[300] leading-5 text-goldAccent'>
+          <h1 className='mt-[5%] text-center font-comfortaa text-[0.93em] font-[300] leading-5 text-goldAccent'>
             By entering, you agree to our
             <br />
             <span className='underline'>Terms and Condition</span> and{' '}

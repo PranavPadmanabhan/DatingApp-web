@@ -4,7 +4,6 @@ import React, { useContext, useState } from 'react';
 
 import GradientText from '@/components/GradientText';
 
-import { ModalContext } from '@/contexts/ModalContext';
 import { UserContext } from '@/contexts/UserContext';
 
 const data = {
@@ -26,7 +25,6 @@ type props = {
 
 const PhoneAuthContainer = ({ setPage, previous = false }: props) => {
   const [show, setShow] = useState<boolean>(true);
-  const { setModalVisibility, modalVisibility } = useContext(ModalContext);
   const { setUser, user } = useContext(UserContext);
   const [error, setError] = useState<string>('');
 
@@ -58,17 +56,17 @@ const PhoneAuthContainer = ({ setPage, previous = false }: props) => {
             alt='logo'
             className='h-[18%] max-h-[130px] w-[35%] max-w-[250px]'
           />
-          <GradientText className='my-[5%] from-[#E3A400] via-[#FFDCA9] to-[#E3A401] text-center text-[2.4rem]'>
+          <GradientText className='my-[5%] from-[#E3A400] via-[#FFDCA9] to-[#E3A401] text-center text-[2em]'>
             Enter
             <br /> Your Number
           </GradientText>
           <div className='my-[2%] flex h-[10%] w-full items-center justify-start'>
-            <div className='flex h-[80%] max-h-[45px] w-[20%] items-center justify-center rounded-[8px] bg-gold-100 text-[1.2vw]'>
+            <div className='flex h-[85%] max-h-[85%] min-h-[35px] w-[20%] items-center justify-center rounded-[8px] bg-gold-100 text-[1.2vw]'>
               IN +91
             </div>
             <input
               type='text'
-              className='ml-2 h-[80%] max-h-[45px] w-[80%] rounded-[8px] border-none bg-gold-100 pl-[15px] placeholder:text-[1.2vw] placeholder:text-gray-400 focus:border-none focus:outline-none'
+              className='ml-2 h-[85%] max-h-[85%] min-h-[35px] w-[80%] rounded-[8px] border-none bg-gold-100 pl-[15px] text-[1.2em] text-black placeholder:text-[1.2em] placeholder:text-gray-400 focus:border-none focus:outline-none'
               placeholder='XXX XXX XXXX'
               onChange={handleInput}
               value={user.phone}
@@ -77,7 +75,7 @@ const PhoneAuthContainer = ({ setPage, previous = false }: props) => {
           <span className='-mt-[3%] self-center text-center text-[0.7rem] text-red-500'>
             {error}
           </span>
-          <h1 className='mt-[5%]  text-center font-comfortaa text-[1.2vw] font-[400] leading-5 text-goldAccent'>
+          <h1 className='mt-[5%]  text-center font-comfortaa text-[1.2em] font-[400] leading-5 text-goldAccent'>
             We’ll send a verification code to this
             <br /> number
           </h1>
