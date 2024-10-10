@@ -41,7 +41,7 @@ const PhoneAuthContainer = ({ setPage, previous = false }: props) => {
   };
 
   return (
-    <AnimatePresence onExitComplete={() => setPage('OtpScreen')}>
+    <AnimatePresence onExitComplete={() => setPage('otpScreen')}>
       {show && (
         <motion.div
           variants={data}

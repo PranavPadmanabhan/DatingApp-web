@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import clsxm from '@/lib/clsxm';
 
 import CheckBox from '@/components/buttons/CheckBox';
+import GradientButton from '@/components/buttons/GradientButton';
 import ItemSelectButton from '@/components/buttons/ItemSelectButton';
 import Select from '@/components/buttons/Select';
 import GradientText from '@/components/GradientText';
@@ -62,7 +63,7 @@ const DetailsScreen = ({ setPage }: Props) => {
     }
   };
   return (
-    <AnimatePresence onExitComplete={() => setPage('phoneAuthScreen')}>
+    <AnimatePresence onExitComplete={() => setPage('imageUploadScreen')}>
       {show && (
         <motion.div
           variants={data}
@@ -70,7 +71,7 @@ const DetailsScreen = ({ setPage }: Props) => {
           animate='visible'
           transition={{ duration: 0.5, damping: 100 }}
           exit='exit'
-          className='relative box-border flex h-[85%] w-[70%] flex-col items-start justify-start pb-[5%]'
+          className='relative box-border flex h-[90%] w-[70%] flex-col items-start justify-start pb-[5%]'
         >
           <img
             src='/images/1.png'
@@ -93,19 +94,19 @@ const DetailsScreen = ({ setPage }: Props) => {
           <div className='flex h-[80%] max-h-[40px] w-[80%] items-center justify-start gap-x-1'>
             <input
               type='number'
-              className=' h-full max-h-[40px] w-[25%] max-w-[60px] rounded-[8px] border-none bg-gold-100 pl-[15px] text-black [appearance:textfield] placeholder:text-[1.2em] placeholder:text-gray-400 focus:border-none focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
+              className=' h-full max-h-[40px] w-[25%] max-w-[60px] rounded-[8px] border-none bg-gold-100 pl-[15px] text-black [appearance:textfield] placeholder:text-[1.2em] placeholder:text-gray-400 focus:border-none focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none'
               placeholder='DD'
               maxLength={2}
             />
             <input
               type='number'
-              className=' h-full max-h-[40px] w-[25%] max-w-[60px] rounded-[8px] border-none bg-gold-100 pl-[15px] [appearance:textfield] placeholder:text-[1.2em] placeholder:text-gray-400 focus:border-none focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
+              className=' h-full max-h-[40px] w-[25%] max-w-[60px] rounded-[8px] border-none bg-gold-100 pl-[15px] [appearance:textfield] placeholder:text-[1.2em] placeholder:text-gray-400 focus:border-none focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none'
               placeholder='MM'
               maxLength={2}
             />
             <input
               type='number'
-              className=' h-full max-h-[40px] w-[40%] max-w-[100px] rounded-[8px] border-none bg-gold-100 pl-[15px] [appearance:textfield] placeholder:text-[1.2em] placeholder:text-gray-400 focus:border-none focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
+              className=' h-full max-h-[40px] w-[40%] max-w-[100px] rounded-[8px] border-none bg-gold-100 pl-[15px] [appearance:textfield] placeholder:text-[1.2em] placeholder:text-gray-400 focus:border-none focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none'
               placeholder='YYYY'
               maxLength={4}
             />
@@ -202,6 +203,12 @@ const DetailsScreen = ({ setPage }: Props) => {
               show this on my profile
             </span>
           </div>
+          <GradientButton
+            onClick={() => setShow(!show)}
+            className='mt-[5%] flex w-[50%] max-w-[310px] items-center justify-center self-center text-[1.2em] text-black'
+          >
+            Save
+          </GradientButton>
         </motion.div>
       )}
     </AnimatePresence>

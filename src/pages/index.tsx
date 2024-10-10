@@ -6,11 +6,12 @@ import Seo from '@/components/Seo';
 import AuthContainer from '@/containers/authContainer';
 import DetailsScreen from '@/containers/DetailsContainer';
 import GetStarted from '@/containers/GetStarted';
+import ImageUploadScreen from '@/containers/ImageUploadContainer';
 import OtpScreen from '@/containers/OtpScreen';
 import PhoneAuthContainer from '@/containers/PhoneAuthContainer';
 
 export default function HomePage() {
-  const [page, setPage] = React.useState<string>('getStarted');
+  const [page, setPage] = React.useState<string>('detailsScreen');
 
   const GetPages = () => {
     switch (page) {
@@ -20,10 +21,12 @@ export default function HomePage() {
         return <AuthContainer setPage={setPage} />;
       case 'phoneAuthScreen':
         return <PhoneAuthContainer setPage={setPage} previous={false} />;
-      case 'OtpScreen':
+      case 'otpScreen':
         return <OtpScreen setPage={setPage} />;
-      case 'DetailsScreen':
+      case 'detailsScreen':
         return <DetailsScreen setPage={setPage} />;
+      case 'imageUploadScreen':
+        return <ImageUploadScreen setPage={setPage} />;
       default:
         return <PhoneAuthContainer setPage={setPage} previous={false} />;
     }

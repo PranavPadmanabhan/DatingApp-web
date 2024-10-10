@@ -48,7 +48,7 @@ const OtpScreen = ({ setPage }: ContainerProps) => {
     }
     if (index === length - 1) {
       setEditMode(!editMode);
-      setPage('DetailsScreen');
+      setPage('detailsScreen');
     }
   };
 
@@ -92,7 +92,7 @@ const OtpScreen = ({ setPage }: ContainerProps) => {
   return (
     <AnimatePresence
       onExitComplete={() => {
-        editMode ? setPage('phoneAuthScreen') : setPage('OtpScreen');
+        editMode ? setPage('phoneAuthScreen') : setPage('otpScreen');
       }}
     >
       {show && (
